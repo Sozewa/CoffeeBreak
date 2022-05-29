@@ -18,9 +18,7 @@ public class CoffeeMakerController implements Constant {
 
     @GetMapping(path = "/switcher")
     public @ResponseBody CoffeeMaker switchCoffeeMaker(@RequestParam int id) {
-        CoffeeMaker coffeeMaker = coffeeMakerService.switcher(id);
-
-        return coffeeMaker;
+        return coffeeMakerService.switcher(id);
     }
 
     @GetMapping(path = "/add")
@@ -37,6 +35,4 @@ public class CoffeeMakerController implements Constant {
     public @ResponseBody Optional<CoffeeMaker> getCoffeeMaker(@RequestParam int id){
         return coffeeMakerService.getOne(id);
     }
-
-
 }

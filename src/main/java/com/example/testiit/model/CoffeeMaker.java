@@ -7,7 +7,7 @@ import javax.persistence.*;
 public class CoffeeMaker {
 
     @Id
-    @SequenceGenerator( name = "jpaSequenceMaker", sequenceName = "JPA_SEQUENCE1", allocationSize = 1, initialValue = 1 )
+    @SequenceGenerator( name = "jpaSequenceMaker", sequenceName = "JPA_SEQUENCE_MAKER", allocationSize = 1, initialValue = 1 )
     @GeneratedValue( strategy = GenerationType.SEQUENCE, generator = "jpaSequenceMaker")
     private int id;
 

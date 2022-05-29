@@ -7,7 +7,7 @@ public class CoffeeMakerHistory {
 
 
     @Id
-    @SequenceGenerator( name = "jpaSequenceHistory", sequenceName = "JPA_SEQUENCE2", allocationSize = 1, initialValue = 1)
+    @SequenceGenerator( name = "jpaSequenceHistory", sequenceName = "JPA_SEQUENCE_HISTORY", allocationSize = 1, initialValue = 1)
     @GeneratedValue( strategy = GenerationType.SEQUENCE, generator = "jpaSequenceHistory")
     @Column(name ="id")
     private Integer id;

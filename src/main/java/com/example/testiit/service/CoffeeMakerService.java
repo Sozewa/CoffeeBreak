@@ -73,7 +73,6 @@ public class CoffeeMakerService implements Constant {
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }
-            System.out.println("11111111111111111111111111111111111111111111111111111");
         }
         coffeeMaker.setHeater(80);
         CoffeeMakerHistory makerHistory = new CoffeeMakerHistory(coffeeMaker);
