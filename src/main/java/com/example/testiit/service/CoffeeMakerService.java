@@ -11,6 +11,7 @@ import org.springframework.stereotype.Service;
 
 import java.time.Instant;
 import java.util.Date;
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -25,8 +26,8 @@ public class CoffeeMakerService implements Constant {
     Thread thread ;
 
     @Async
-    public CoffeeMaker switcher(int id) {
-        CoffeeMaker maker = makerRepo.findById(id).get();
+    public CoffeeMaker switcher(long id) {
+        CoffeeMaker maker = makerRepo.findById( id).get();
         CoffeeMakerHistory makerHistory = new CoffeeMakerHistory(maker);
 
         if (maker.isSwitcher()) {
@@ -50,7 +51,7 @@ public class CoffeeMakerService implements Constant {
         return maker;
     }
 
-    public Iterable<CoffeeMaker> getAll() {
+    public List<CoffeeMaker> getAll() {
         return makerRepo.findAll();
     }
 
@@ -80,7 +81,7 @@ public class CoffeeMakerService implements Constant {
         history.save(makerHistory);
     }
 
-    public Optional<CoffeeMaker> getOne(int id) {
+    public Optional<CoffeeMaker> getOne(long id) {
        return makerRepo.findById(id);
     }
 }

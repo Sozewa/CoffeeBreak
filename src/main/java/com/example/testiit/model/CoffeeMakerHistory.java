@@ -10,7 +10,7 @@ public class CoffeeMakerHistory {
     @SequenceGenerator( name = "jpaSequenceHistory", sequenceName = "JPA_SEQUENCE_HISTORY", allocationSize = 1, initialValue = 1)
     @GeneratedValue( strategy = GenerationType.SEQUENCE, generator = "jpaSequenceHistory")
     @Column(name ="id")
-    private Integer id;
+    private Long id;
 
     @Column(name = "reports",columnDefinition = "varchar")
     private String reports;

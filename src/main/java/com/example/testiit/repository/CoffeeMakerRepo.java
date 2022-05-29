@@ -1,7 +1,7 @@
 package com.example.testiit.repository;
 
 import com.example.testiit.model.CoffeeMaker;
-import org.springframework.data.repository.CrudRepository;
+import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface CoffeeMakerRepo extends CrudRepository<CoffeeMaker,Integer> {
+public interface CoffeeMakerRepo extends JpaRepository<CoffeeMaker,Long> {
 }

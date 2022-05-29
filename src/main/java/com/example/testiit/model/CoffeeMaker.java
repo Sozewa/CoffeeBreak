@@ -9,7 +9,7 @@ public class CoffeeMaker {
     @Id
     @SequenceGenerator( name = "jpaSequenceMaker", sequenceName = "JPA_SEQUENCE_MAKER", allocationSize = 1, initialValue = 1 )
     @GeneratedValue( strategy = GenerationType.SEQUENCE, generator = "jpaSequenceMaker")
-    private int id;
+    private Long id;
 
     private String name;
 
@@ -26,7 +26,7 @@ public class CoffeeMaker {
         this.name = name;
     }
 
-    public void setId(int id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -38,7 +38,7 @@ public class CoffeeMaker {
         this.switcher = switcher;
     }
 
-    public Integer getId() {
+    public Long getId() {
         return id;
     }
 
