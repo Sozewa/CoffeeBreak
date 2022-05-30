@@ -11,8 +11,10 @@ import com.example.testiit.model.CoffeeMaker;
 import com.example.testiit.repository.CoffeeMakerRepo;
 import com.example.testiit.repository.HistoryRepository;
 import net.bytebuddy.dynamic.DynamicType;
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
+import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.context.TestConfiguration;
 import org.springframework.boot.test.mock.mockito.MockBean;
@@ -25,8 +27,8 @@ import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
 
 @SpringBootTest
-@TestConfiguration
 @EnableAsync
+@AutoConfigureMockMvc
 class CoffeeMakerServiceTest {
 
     @MockBean

@@ -1,0 +1,12 @@
+spring:
+  autoconfigure:
+    exclude:
+      - org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration
+  jpa:
+    database: postgresql
+    hibernate:
+      ddl-auto: update
+server:
+  port: 8081
+  error:
+    include-message: always
